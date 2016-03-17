@@ -20,22 +20,7 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       loader: 'babel',
-      include: path.join(__dirname, 'src'),
-      query: {
-        plugins: ['react-transform'],
-        extra: {
-          'react-transform': {
-            transforms: [{
-              transform: 'react-transform-hmr',
-              imports: ['react'],
-              locals: ['module']
-            }, {
-              transform: 'react-transform-catch-errors',
-              imports: ['react', 'redbox-react']
-            }]
-          }
-        }
-      }
+      include: path.join(__dirname, 'src')
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader!postcss-loader',
